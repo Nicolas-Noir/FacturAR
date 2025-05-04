@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FacturAR - Extracción de información</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">Factur<span>AR</span></div>
+    <ul class="nav-links">
+      <li><a href="#">me</a></li>
+      <li><a href="#">la</a></li>
+      <li><a href="#">ma</a></li>
+      <li><a href="#">man</a></li>
+      <li><a href="#">mucho</a></li>
+      <li class="dropdown">
+        <a href="#">More ▾</a>
+        <div class="dropdown-menu">
+          <a href="#">Docs</a>
+          <a href="#">Support</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <div class="container">
+    <h1 class="title">Extracción de información de archivos</h1>
+    <p class="subtitle">Sube tus documentos para extraer datos automáticamente</p>
+    
+    <div class="drop-zone" id="drop-zone">
+      <span class="drop-icon">⬇</span>
+      <p>Arrastra tus archivos aquí o haz clic para seleccionar</p>
+      <input type="file" class="file-input" id="fileInput" multiple />
+    </div>
+
+    <!-- Lista de archivos seleccionados -->
+    <div class="file-section">
+      <h3>Archivos seleccionados:</h3>
+      <ul class="file-list" id="fileList"></ul>
+    </div>
+
+    <div class="actions">
+      <button class="download-btn" id="downloadBtn">Descargar en formato</button>
+
+      <div class="format-buttons">
+        <button class="format-btn active" data-format="excel">Excel</button>
+        <button class="format-btn" data-format="csv">CSV</button>
+        <button class="format-btn" data-format="json">JSON</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="script.js"></script>
+</body>
+</html>

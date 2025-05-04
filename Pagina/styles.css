@@ -1,0 +1,307 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #e6f0ff);
+  min-height: 100vh;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c1c2b;
+  padding: 0 20px;
+  height: 60px;
+  color: white;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  background-color: #87CEEB;
+  padding: 0 6px;
+  border-radius: 4px;
+  color: #FFB81C;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #87CEEB;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #1c1c2b;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  min-width: 120px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 8px 0;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  color: #87CEEB;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Contenido principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1c1c2b;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Zona de drop */
+.drop-zone {
+  border: 3px dashed #1c1c2b;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 500px;
+  height: 200px;
+  text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.drop-zone:hover,
+.drop-zone.dragover {
+  background-color: #e0f0ff;
+  border-color: #6398f3;
+  transform: translateY(-2px);
+}
+
+.drop-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #6398f3;
+}
+
+.file-input {
+  display: none;
+}
+
+/* Sección de archivos */
+.file-section {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.file-section h3 {
+  margin-bottom: 15px;
+  color: #1c1c2b;
+}
+
+.file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.file-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-item:hover {
+  background-color: #f8f9fa;
+}
+
+.file-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.file-info p strong {
+  color: #1c1c2b;
+}
+
+/* Botones */
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.download-btn {
+  margin: 15px 0;
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  background-color: #6398f3;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+}
+
+.download-btn:hover {
+  background-color: #4a87f1;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.format-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.format-btn {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background-color: white;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.format-btn:hover {
+  background-color: #f0f0f0;
+}
+
+.format-btn.active {
+  background-color: #6398f3;
+  color: white;
+  border-color: #6398f3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 10px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .container {
+    padding: 80px 15px 30px;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .format-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Estilos para el botón de eliminar */
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.remove-btn:hover {
+  background: #cc0000;
+}
+
+.file-item {
+  position: relative;
+  padding-right: 40px; /* Espacio para el botón de eliminar */
+}
