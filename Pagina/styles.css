@@ -1,4 +1,3 @@
-/* Estilos generales */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,7 +13,7 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
+
 .navbar {
   display: flex;
   align-items: center;
@@ -92,7 +91,6 @@ body {
   display: block;
 }
 
-/* Contenido principal */
 .container {
   display: flex;
   flex-direction: column;
@@ -117,7 +115,6 @@ body {
   text-align: center;
 }
 
-/* Zona de drop */
 .drop-zone {
   border: 3px dashed #1c1c2b;
   border-radius: 15px;
@@ -149,11 +146,33 @@ body {
   color: #6398f3;
 }
 
+.button-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.upload-btn {
+  background-color: #6398f3;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.6s;
+}
+
+.upload-btn:hover {
+  background-color: #e0e0e0;
+}
+
+
 .file-input {
   display: none;
 }
 
-/* Sección de archivos */
+
 .file-section {
   width: 100%;
   max-width: 500px;
@@ -198,7 +217,6 @@ body {
   color: #1c1c2b;
 }
 
-/* Botones */
 .actions {
   display: flex;
   flex-direction: column;
@@ -254,54 +272,40 @@ body {
   border-color: #6398f3;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 0 10px;
-  }
-  
-  .nav-links {
-    gap: 15px;
-  }
-  
-  .container {
-    padding: 80px 15px 30px;
-  }
-  
-  .title {
-    font-size: 1.5rem;
-  }
-  
-  .format-buttons {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+.hero {
+  background-color: #000; /* fondo oscuro */
+  color: #fff; /* texto claro */
+  padding: 100px 20px;
+  text-align: center;
 }
 
-/* Estilos para el botón de eliminar */
-.remove-btn {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: #ff4444;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  font-size: 14px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.2s;
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.remove-btn:hover {
-  background: #cc0000;
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.file-item {
-  position: relative;
-  padding-right: 40px; /* Espacio para el botón de eliminar */
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #6398f3;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #6398f3;
 }
